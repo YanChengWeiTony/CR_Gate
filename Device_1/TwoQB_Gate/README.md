@@ -15,13 +15,15 @@ In the field of quantum-computing gate operation, Cross resonance (CR) gate is o
  
 ## Some results:
 1. Two-pulse scheme's pulse shape:
- <img src="https://github.com/YanChengWeiTony/CR_Gate/blob/main/Device_1/TwoQB_Gate/Decoherence/multiple_read_all.jpg" width="600" height="400">
+ <img src="https://github.com/YanChengWeiTony/CR_Gate/blob/main/Device_1/TwoQB_Gate/Two_Pulses/Opt_Cntl_Full/opt_cntl_2/SingleCase_1.jpg" width="600" height="400">
+
 ```
 Infidelity: ~5.4E-5
 ```
 
 2. Two-pulse scheme's pulse shape:
  <img src="https://github.com/YanChengWeiTony/CR_Gate/blob/main/Device_1/TwoQB_Gate/Single_Pulse/CR_Single_Pulse_100ns/GRAPE4/single_case.jpg" width="600" height="400">
+
 ```
 Infidelity: ~ 1.9E-4
 ```
