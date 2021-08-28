@@ -29,13 +29,17 @@ In the field of quantum-computing gate operation, Cross resonance (CR) gate is o
 3. estimate_cross_leak.m: To estimate the interaction strength and leakage versus different detunings. It generates estimate_cross_leak.jpg
 4. Infid_time_system: Summarize the optimal-control results and plot with real-device results. It generates Infid_time_system.jpg
 
+## Results:
+<img src="https://github.com/YanChengWeiTony/CR_Gate/blob/main/Infid_time_system.jpg" width="600" height="400">
+
 ## Usage
 1. Requirements: MATLAB 2016 or above
 2. Download the code by
 
-	git clone https://github.com/YanChengWeiTony/CR_gate.git
-	cd CR_gate
-
+```
+git clone https://github.com/YanChengWeiTony/CR_gate.git
+cd CR_gate
+```
 
 ## Reference:
 
