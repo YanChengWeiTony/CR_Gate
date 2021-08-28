@@ -31,12 +31,6 @@ Infidelity: ~ 1.9E-4
 3. Infidelity v.s. Coherence time:
  <img src="https://github.com/YanChengWeiTony/CR_Gate/blob/main/Device_1/TwoQB_Gate/Decoherence/multiple_read_all.jpg" width="600" height="400">
 
-## Usage
-1. Requirements: MATLAB 2016 or above
-2. Download the code by
-
-	git clone https://github.com/YanChengWeiTony/CR_gate.git
-	cd CR_gate
 
 
 ## Reference:
