@@ -1,0 +1,70 @@
+function [ output_args ] = opt_ctl_Pi_fx_fy( input_args )
+%% Spec
+
+%% Options
+parpool('local')
+options = optimoptions('fmincon','Display','iter-detailed','SpecifyObjectiveGradient',true,'Algorithm','sqp','OptimalityTolerance', 1e-10, 'UseParallel', true);
+
+
+%% Calculate gate total time
+tgPi = 10;
+
+
+
+%% init
+tot_basis_num = 8 + 8 + 1;
+not_optimal_parms = 0;
+
+x0 = [            0.260252242406322
+  -0.185648429743335
+  -0.017397087015559
+  -0.036692913951070
+  -0.017523691990159
+  0
+  0
+  0
+  
+   0.006677802146644
+  -0.047339752611495
+  -0.019646258424143
+  -0.030920513394434
+  -0.006467451005232
+  0
+  0
+  0
+  
+   -0.000];
+
+%% process
+myx0 = [x0];
+p_g = zeros([tot_basis_num+not_optimal_parms,1]);
+
+
+%% Run
+
+lb=[-2 * ones([1 tot_basis_num])];
+ub=[3 * ones([1 tot_basis_num])];
+
+%aeq, beq
+aeq = zeros(tot_basis_num+not_optimal_parms);
+for a=1:not_optimal_parms
+    aeq(tot_basis_num+a,tot_basis_num+a)=1;
+end
+
+beq = zeros([tot_basis_num+not_optimal_parms 1]);
+for a=1:not_optimal_parms
+    beq(tot_basis_num+a)=myx0(tot_basis_num+a);
+end
+
+% optimal
+x = fmincon(@par_XI_Import, myx0,[],[],aeq,beq,lb,ub,[],options);
+x(1:tot_basis_num)
+x(tot_basis_num+1:end)
+
+delete(gcp('nocreate'))
+end
+
+function [c, ceq] = nonlcon(x)
+c = -1;
+ceq = 0;
+end
